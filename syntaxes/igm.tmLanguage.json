@@ -1,0 +1,42 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "IGM",
+	"patterns": [
+		{
+			"include": "#keywords"
+		},
+		{
+			"include": "#tokens"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "markup.heading.section.igm",
+				"match": "^[^\\t\\s].*$"
+			},{
+				"name": "comment.thingkey.igm",
+				"match": "^(\\s{4,}|\\t+)\\*.*$"
+			},{
+				"name": "markup.inline.raw.tag.igm",
+				"match": "^(\\s{4,}|\\t+)([\\w ]*):"
+			},{
+				"name": "markup.inline.raw.switch.igm",
+				"match": "^(\\s{4,}|\\t+)([\\w ]*)$"
+			},{
+				"name": "markup.inserted.htmltags.igm",
+				"match": "<.*?>"
+			},{
+				"name": "variable.css.vars.igm",
+				"match": "\\$[\\w\\d_]*"
+			}]
+		},
+		"tokens": {
+			"patterns": [{
+				"name": "string.regexp.pipe.igm",
+				"match": "\\|"
+			}]
+		}
+	},
+	"scopeName": "text.igm"
+}

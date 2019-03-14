@@ -1,0 +1,30 @@
+{
+    "name": "igm-highlight",
+    "displayName": "igm-highlight",
+    "description": "Syntax highlighting for DashNet's Idle Game Maker.",
+    "version": "0.0.1",
+    "author": {
+        "name": "Psi",
+        "url": "https://psi.codes"
+    },
+    "engines": {
+        "vscode": "^1.32.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "igm",
+            "aliases": ["IGM", "igm"],
+            "extensions": ["igm"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "igm",
+            "scopeName": "text.igm",
+            "path": "./syntaxes/igm.tmLanguage.json"
+        }]
+    },
+    "publisher": "ThePsionic"
+}
